@@ -1,0 +1,11 @@
+.fiex-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button {
+    padding: 10px;
+    font-size: 2rem;
+    background-color: rgb(28, 117, 169);
+    border-radius: 10px;
+}

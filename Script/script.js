@@ -2,7 +2,8 @@ const choices = ["rock" ,"scissors" ,"paper"];
 function game() { // Play 5 rounds
     let pp = 0;
     let cp = 0;
-    for(let i = 0 ; i < 5 ; i++){
+    for(let i = 1 ; i <= 5 ; i++){
+        console.log(`${i}th Round.`);
         let currentRoundWinner = playRound();
         if(currentRoundWinner === "player"){
             pp = pp + 1;
@@ -10,6 +11,7 @@ function game() { // Play 5 rounds
             cp = cp + 1;
         }
     }
+    console.log(".....................");
     console.log(`Your Poins = ${pp}.`);
     console.log(`Computer points = ${cp}.`);
     if(pp > cp){
@@ -27,9 +29,10 @@ function game() { // Play 5 rounds
 function playRound() { // A single round
     let playerSelection = getPlayerChoice();
     let computerSelection = getComputerChoice();
-    console.log("Computer Selected :", computerSelection.toUpperCase());
+    console.log("Player Selected : ",playerSelection.toUpperCase());
+    console.log("Computer Selected : ", computerSelection.toUpperCase());
     let rwinner = roundWinner(playerSelection, computerSelection);
-    console.log("...................................");
+    console.log(".................");
     return rwinner;
 }
 
@@ -49,7 +52,6 @@ function getPlayerChoice() { //Get Player Selection
         input = prompt("Make sure you have entered a correct choice.");
     }
     input = input.toLowerCase();
-    console.log("Player selected : ",input.toUpperCase());
     return input;
 }
 
@@ -70,5 +72,4 @@ function roundWinner(choicePlayer,choiceComputer) { //Checks who wins in a singl
     }
 }
 
-game();
 
