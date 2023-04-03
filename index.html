@@ -9,10 +9,41 @@
 
 </head>
 <body>
-    <div class="fiex-Container">
-        <h1>Rock Paper Scissors</h1>
-        <button onclick="game()">Start Game</button>
-    </div>
+    <h1 class="heading">Rock Paper Scissors</h1>
+    <button onclick="game()">Start Game</button>
+    <main>
+        <div class="container">
+            <div class="player details">
+                <h2>Player : <span class="playerScore score">0</span></h2>
+                <div class="playerChoice choice">
+                    <img src="./images/scissors.png" alt="" class="choiceImage">
+                </div>
+                <p class="playerChoiceText choiceText">Rock</p>
+            </div>
+            <div class="computer details">
+                <h2>Computer : <span class="playerScore score">0</span></h2>
+                <div class="computerChoice choice">
+                    <img src="./images/paper.png" alt="" class="choiceImage">
+                </div>
+                <p class="ComputerChoiceText choiceText">Rock</p>
+            </div>
+        </div>
+        <div class="resultContainer">
+            <div class="results">
+                <p>You Win! Rock Beats Paper</p>
+            </div>
+        </div>
+        <div class="buttonContainer">
+            <button class="rock choiceBtn"><img src="./images/rock.png" alt="Rock">Rock</button>
+        
+            <button class="paper choiceBtn"><img src="./images/paper.png" alt="Paper">Paper</button>
+        
+            <button class="scissors choiceBtn"><img src="./images/scissors.png" alt="Scissors">Scissors</button>
+        </div>
+        <p class="btnBelowPara">
+            Choose "Rock", "Paper" or "Scissors" from above.
+        </p>
+    </main>
 </body>
 <script src="./Script/script.js"></script>
 </html>
