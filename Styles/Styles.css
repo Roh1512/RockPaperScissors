@@ -7,6 +7,7 @@
     --btnBackGroundActive : #8D7B68;
     --btnBorderHover : rgb(255, 255, 255);
     --btnBorderActive : rgb(148, 141, 141);
+    --endStartBtnBG : radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 *{
@@ -35,17 +36,108 @@ body {
     text-decoration: underline;
 }
 
-main {
+
+/* Start Screen styles */
+.startScreen {
+    position: absolute;
+    z-index: 1;
+}
+.startScreen button {
+    padding: 1rem;
+    font-size: 2rem;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #000000;
+    font-weight: 600;
+    box-shadow: 2px 2px 10px #cbbbcf;
+}
+.startScreen button:hover {
+    transform: scale(1.2);
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    transition: 0.3s;
+}
+.startScreen button:active {
+    transform: scale(0.8);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+
+/* End Screen Styles */
+.endScreen {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 14rem;
+    background-color: #271a2a;
+    border: 2px solid #ddd;
+    width: 25rem;
+    position: absolute;
+    z-index: 1;
+    border-radius: 10px;
+    opacity: 0.97;
+    display: none;
+}
+
+.endScreen p {
+    color: #dddbdb;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.endScreen .endOptions {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+.endScreen .endOptions button {
+    padding: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: .4s;
+    box-shadow: 0px 5px 10px rgb(68, 67, 67);
+}
+.endScreen .endOptions button:hover {
+    transform: scale(1.2);
+}
+.endScreen .endOptions button:active {
+    transform: scale(0.8);
+    opacity: 0.4;
+}
+
+.endScreen .endOptions button.playAgain {
+    background: var(--endStartBtnBG);
+    border: none;
+    color: #070606;
+    font-size: 1.7rem;
+}
+.endScreen .endOptions button.quitGame {
+    background: none;
+    color: #dddbdb;
+}
+
+
+/* Game screen styles */
+.gameScreen {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
-    /* display: none; */
+    display: none;
+    /* filter: blur(10px); */
+    /* pointer-events: none; */ /* Disables Screen */
 }
 .container {
     position: absolute;
-    width: 80%;
+    width: 70%;
     color: var(--textColor);
     display: flex;
     justify-content: space-evenly;
@@ -117,6 +209,7 @@ main {
     position: absolute;
     bottom: 10rem;
     color: beige;
+    transition: 5s;
 }
 
 .buttonContainer {
