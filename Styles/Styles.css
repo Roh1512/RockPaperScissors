@@ -135,6 +135,20 @@ body {
     /* filter: blur(10px); */
     /* pointer-events: none; */ /* Disables Screen */
 }
+
+.round {
+    position: absolute;
+    bottom: 13rem;
+    font-size: 2rem;
+    color: #cbbbcf;
+}
+.roundNumber {
+    color: greenyellow;
+    border-bottom: 1px solid red;
+    padding: 4px;
+    border-radius: 20%;
+}
+
 .container {
     position: absolute;
     width: 70%;
